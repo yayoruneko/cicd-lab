@@ -24,10 +24,10 @@ describe('Fastify app', () => {
     expect(response.statusCode).toBe(200);
 
     // 正確的預期值
-    // expect(response.json().message).toBe('CI/CD Lab Fastify app is running');
+    expect(response.json().message).toBe('CI/CD Lab Fastify app is running');
 
     // 錯誤的預期值
-    expect(response.json().message).toBe('wrong message for demo');
+    // expect(response.json().message).toBe('wrong message for demo');
 
     await app.close();
   });
